@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <div class="container" id="app">
-        <h1>Vue Email List</h1>
+    <div class="container" id="app" v-cloak>
+        <h1 class="text-center p-4">Vue Email List</h1>
         <ul class="list-group">
-            <li class="list-group-item">Email</li>
+            <li class="list-group-item" v-for="(mail) in emails" v-show="emails.length >= 10">{{mail}}</li>
         </ul>
     </div>
 
